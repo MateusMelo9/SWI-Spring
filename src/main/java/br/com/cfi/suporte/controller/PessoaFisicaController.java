@@ -1,5 +1,7 @@
 package br.com.cfi.suporte.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +23,11 @@ public class PessoaFisicaController {
 	}
 	
 	@RequestMapping
-	public String pesquisa(){
-		return "PesquisaPessoaFisica";
+	public ModelAndView pesquisa(){
+		List<PessoaFisica> pessoas = iPessoa.findAll();
+		ModelAndView mv = new ModelAndView("PesquisaPessoaFisica");
+		mv.addObject("relatorio", pessoas);
+		return mv;
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)

@@ -32,9 +32,17 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td colspan="6">Nenhum registro encontrado.</td>
+					<tr th:each="pessoa : ${relatorio}">
+						<td class="text-center" th:text="${pessoa.id}">1</td>
+						<td class="text-center" th:text="${pessoa.nome}">2</td>
+						<td class="text-center" th:text="${{pessoa.apelido}}">3</td>
+						<td th:text="${pessoa.endereco}">4</td>
+						<td class="text-center" th:text="${pessoa.uf}">5</td>
+						<td class="text-center" th:text="${pessoa.bairro}">6</td>					
 					</tr>
+					<tr>
+						<td colspan="6" th:if="${#lists.isEmpty(relatorio)}">Nenhum registro foi encontrado.</td>
+					</tr>					
 				</tbody>
 			</table>
 		</div>
