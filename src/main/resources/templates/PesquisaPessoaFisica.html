@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="LayoutFragment">
+<head>
+<meta charset="UTF-8" />
+<title>PESQUISA</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<section layout:fragment="conteudo">
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="clearfix">
+				<h1 class="panel-title">Pesquisa</h1>
+				<a class="link-panel" href="/pessoafisica/novo" >Novo</a>
+			</div>
+		</div>
+	
+		<div class="panel-default">
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th class="text-center col-md-1">Módulos</th>
+						<th class="text-center col-md-1">Versão</th>
+						<th class="text-center col-md-1">Data</th>
+						<th class="text-center col-md-5">Descrição</th>
+						<th class="text-center col-md-1">OPS</th>
+						<th class="text-center col-md-3">Solicitante</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="6">Nenhum registro encontrado.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>
+</html>
